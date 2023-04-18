@@ -29,7 +29,7 @@ function Offers(props) {
     );
 }
 const OffersStyle = styled.div`
-    margin-top: 2rem;
+    margin-top: -20rem;
     .heading{
         width: 100%;
         text-align: center;
