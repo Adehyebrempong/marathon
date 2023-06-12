@@ -1,10 +1,32 @@
-import React from 'react';
-import { logo } from '../../assets';
+import React, { useEffect, useState } from 'react';
+import { logo } from '../assets';
 import styled from 'styled-components';
-import { globalColors } from '../GlobalStyle/globalcolors';
+import { globalColors } from './GlobalStyle/globalcolors';
 function Navbar(props) {
+    const [showShadow, setShowShadow] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.pageYOffset > 0) {
+                setShowShadow(true);
+            } else {
+                setShowShadow(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+    const navBarShadow = {
+        boxShadow: showShadow ? '0px 2px 4px rgba(0, 0, 0, 0.2)' : 'none',
+        transition: 'box-shadow 0.3s ease-in-out',
+    };
     return (
-        <NavbarStyle>
+        <NavbarStyle style={navBarShadow}>
             <img src={logo} alt="logo" className='logo' />
             <ul>
                 <a href="#"><li>About Us</li></a>
@@ -15,7 +37,7 @@ function Navbar(props) {
 }
 
 const NavbarStyle = styled.section`
-    background-color:${globalColors.main};
+    background-color:${globalColors.background};
     padding:1rem 5%;
     width:100%;
     display:flex;
@@ -26,8 +48,8 @@ const NavbarStyle = styled.section`
     left: 0;
     z-index: 3000000000;
     .logo{
-        width:3rem;
-        height:3rem;
+        width:6rem;
+       
     }
     ul{
         display:flex;

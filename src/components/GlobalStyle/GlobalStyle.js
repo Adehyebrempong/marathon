@@ -1,5 +1,10 @@
 import { createGlobalStyle } from "styled-components";
 
+
+export const globalStyling = {
+  padding_lr: "5%"
+}
+
 const Globalstyle = createGlobalStyle`
 
   *,*::before,*::after{

@@ -1,12 +1,10 @@
 import React from 'react';
-import HeroSection from './HeroSection';
-import Offers from './Offers';
+import HomeContent from './HomeContent';
 
 function HomeLayout(props) {
     return (
         <div>
-            <HeroSection />
-            <Offers />
+            <HomeContent />
         </div>
     );
 }
