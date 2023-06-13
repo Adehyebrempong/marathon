@@ -54,7 +54,9 @@ function RegisterForm({ closeModal }) {
         []
     );
     function changeForm() {
-        setContent((prevNumber) => prevNumber + 1)
+        if (content < 3) {
+            setContent((prevNumber) => prevNumber + 1)
+        }
     }
     return (
         <>
@@ -286,7 +288,7 @@ function RegisterForm({ closeModal }) {
                                         }}>
                                             <p>Registration Fee: $ <input type="number" className='amount-input' /> (Please note that e-levy and other service charges apply) I hereby certify that I am physically fit and have trained sufficiently for this event. I release the [marathon organization name], its directors, officers, employees, volunteers, sponsors, and agents from all liability arising from my participation in this event.</p>
                                         </div>
-                                        <Button title={'submit'} function={changeForm} />
+                                        <Button title={'Submit'} function={changeForm} />
                                     </>
                                 }
 
