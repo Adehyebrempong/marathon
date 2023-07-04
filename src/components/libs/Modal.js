@@ -55,29 +55,6 @@ const Modal = ({ handleClose, content }) => {
     );
 };
 
-const ModalText = ({ text }) => (
-    <div className="modal-text">
-        <h3>Modal</h3>
-        <h5>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius laboriosam labore, totam
-            expedita voluptates tempore asperiores sequi, alias cum veritatis, minima dolor iste similique
-            eos id. Porro, culpa? Officiis, placeat?
-        </h5>
-    </div>
-);
-
-const ModalButton = ({ onClick, label }) => (
-    <motion.button
-        className="modal-button"
-        type="button"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
-        onClick={onClick}
-    >
-        {label}
-    </motion.button>
-);
-
 const ModalStyle = styled(motion.div)`
 
   width: clamp(50%, 700px, 90%);

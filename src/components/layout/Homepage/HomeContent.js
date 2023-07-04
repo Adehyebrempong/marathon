@@ -4,12 +4,11 @@ import styled from 'styled-components';
 import { globalStyling } from '../../GlobalStyle/GlobalStyle';
 import { runningWoman } from '../../../assets';
 import Button from '../../libs/Button';
-// 
-import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import useModal from '../../../hooks/useModal';
 import Modal from '../../libs/Modal';
 import RegisterForm from './RegisterForm';
+
 
 const ModalContainer = ({ children, label }) => (
   // Enables the animation of components that have been removed from the tree
@@ -39,12 +38,10 @@ function HomeContent(props) {
 
         <div className="content">
           <h2>
-            COME WITH US <br />
-            AT THE RUNNING <br />
-            FESTIVAL
+            Aburi Mountain <br /> Marathon
           </h2>
-          <p>The Speed Festival 2023, our biggest event of the year, is our way of expressing gratitude to our loyal customers and all the amazing people of Indonesia. Join us for a series of exciting activities designed for families and millennials alike. It's our pleasure to celebrate with you!</p>
-
+          <p>10Km Marathon Starting from Ayi Mensah toll booth to the Aburi Botenical Gardens.
+          </p>
           <Button title={'Register'} function={open} />
         </div>
 
@@ -73,14 +70,14 @@ padding: 1rem ${globalStyling.padding_lr};
 .content{
     position: relative;
     z-index: 200;
-    width: 50;
+    width: 100%;
     
    
 h2{
 font-family: 'Integral CF',sans-serif;
 font-style: normal;
 font-weight: 700;
-font-size: 4.5rem;
+font-size: 4rem;
  @media only screen and (max-width: 918px) {
       font-size: 4rem;
     }
